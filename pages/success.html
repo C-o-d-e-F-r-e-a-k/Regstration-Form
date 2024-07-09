@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="https://th.bing.com/th/id/OIP.kwE8IapDUTtylieeRnn2YAHaHa?pid=ImgDet&rs=1"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="success.css" />
+    <title>Registration Successful</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h1">Registration Successful</h1>
+      <p>Thank you for registering.</p>
+    </div>
+
+    <script>
+      // Check if the URL contains a specific query parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("terms")) {
+        let h1 = document.querySelector(".h1")
+        h1.textContent = "Terms & Conditions";
+        document.querySelector("p").innerHTML = `<ul>
+            <li>Here are the terms and conditions...</li><br/>
+            <li>Here are the terms and conditions...</li><br/>
+            <li>Here are the terms and conditions...</li><br/>
+            <li>Here are the terms and conditions...</li><br/>
+            <li>Here are the terms and conditions...</li><br/>
+            <li>Here are the terms and conditions...</li><br/>
+            <li>Here are the terms and conditions...</li><br/>
+            <li>Here are the terms and conditions...</li><br/>
+          </ul>`;
+          h1.style.marginBottom = "5vh";
+      }
+    </script>
+  </body>
+</html>

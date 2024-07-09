@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <link rel="stylesheet" href="error.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="errorHead">Error</h1>
+      <p id="errorPara">An error occurred. Please try again.</p>
+    </div>
+
+    <script>
+      console.log("Current URL:", window.location.href);
+
+      const params = new URLSearchParams(window.location.search);
+      const message = params.get("message");
+
+      console.log("Message parameter:", message);
+
+      const errorPara = document.getElementById("errorPara");
+      if (message === "userexists") {
+        errorHead.textContent = "Ooops!";
+        errorPara.textContent = "A user already exists with this email.";
+      } else if (message === "servererror") {
+        errorPara.textContent =
+          "A server error occurred. Please try again later.";
+      }
+    </script>
+  </body>
+</html>
